@@ -84,7 +84,6 @@ Quelques aides
  * [Readme](README.md)
  * [commun aux deux parties](2-shared.md)
  * [Typed](2-typed.md)
- * [Untyped](2-untyped.md)
 
 
 Bon courage
