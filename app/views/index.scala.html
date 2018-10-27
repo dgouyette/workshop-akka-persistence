@@ -1,0 +1,10 @@
+@()
+@main("") {
+
+    <div class="column">
+        <h4>Boards Events {{events.length}} : </h4>
+        <li v-for="e in events">
+            <span class="tag is-info">Board {{e.id}} {{e.type}}  {{ e.title }}  - {{e.description}}</span>
+        </li>
+    </div>
+}

@@ -1,0 +1,25 @@
+@(title: String)(content: Html)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.AssetsBuilder.versioned("stylesheets/bulma.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.AssetsBuilder.versioned("images/favicon.png")">
+    </head>
+    <body>
+        <div class="container">
+            <div id="app">
+                    <router-view></router-view>
+            </div>
+        </div>
+        <script src="@routes.AssetsBuilder.versioned("lib/vue/dist/vue.min.js")" type="text/javascript"></script>
+        <script src="@routes.AssetsBuilder.versioned("lib/vue-router/dist/vue-router.js")" type="text/javascript"></script>
+        <script src="//cdn.jsdelivr.net/npm/sortablejs@@1.7.0/Sortable.min.js"></script>
+        <script src="@routes.AssetsBuilder.versioned("javascripts/vuedraggable.min.js")" type="text/javascript"></script>
+        <script src="@routes.AssetsBuilder.versioned("javascripts/axios.js")" type="text/javascript"></script>
+        <script src="@routes.AssetsBuilder.versioned("javascripts/simplewebsocket.min.js")" type="text/javascript"></script>
+        <script src="@routes.AssetsBuilder.versioned("javascripts/DashboardList.js")" type="text/javascript"></script>
+        <script src="@routes.AssetsBuilder.versioned("javascripts/DashboardShow.js")" type="text/javascript"></script>
+        <script src="@routes.AssetsBuilder.versioned("javascripts/main.js")" type="text/javascript"></script>
+    </body>
+</html>

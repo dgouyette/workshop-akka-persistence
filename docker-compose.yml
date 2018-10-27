@@ -1,0 +1,12 @@
+postgres:
+  image: postgres:latest
+  container_name: postgres_workshop
+  environment:
+    - "TZ=Europe/Paris"
+    - "POSTGRES_USER=docker"
+    - "POSTGRES_PASSWORD=docker"
+    - "POSTGRES_DB=workshop"
+  ports:
+    - "5432:5432"  # credentials (docker:docker)
+  volumes:
+    - "./initdb:/docker-entrypoint-initdb.d"

@@ -1,0 +1,34 @@
+
+GET         /                                                                   controllers.untyped.BoardController.index
+GET         /healthcheck                                                        controllers.monitoring.MonitoringController.index
+
+POST        /api/v1/untyped/boards                                              controllers.untyped.BoardController.create
+GET         /api/v1/untyped/boards                                              controllers.untyped.BoardController.list
+GET         /api/v1/untyped/boards/events                                       controllers.untyped.BoardController.events
+GET         /api/v1/untyped/boards/:boardId                                     controllers.untyped.BoardController.show(boardId)
+
+GET         /api/v1/untyped/boards/:boardId/events                              controllers.untyped.TicketController.events(boardId)
+POST        /api/v1/untyped/boards/:boardId/tickets                             controllers.untyped.TicketController.create(boardId)
+PUT         /api/v1/untyped/boards/:boardId/tickets/:ticketId/todo              controllers.untyped.TicketController.updateStatusTodo(boardId, ticketId)
+PUT         /api/v1/untyped/boards/:boardId/tickets/:ticketId/inprogress        controllers.untyped.TicketController.updateStatusInProgress(boardId, ticketId)
+PUT         /api/v1/untyped/boards/:boardId/tickets/:ticketId/done              controllers.untyped.TicketController.updateStatusDone(boardId, ticketId)
+GET         /api/v1/untyped/boards/:boardId/tickets                             controllers.untyped.TicketController.list(boardId)
+
+
+
+
+POST        /api/v1/typed/boards                                                controllers.typed.BoardController.create
+GET         /api/v1/typed/boards                                                controllers.typed.BoardController.list
+GET         /api/v1/typed/boards/events                                         controllers.typed.BoardController.events
+GET         /api/v1/typed/boards/:boardId                                       controllers.typed.BoardController.show(boardId)
+
+GET         /api/v1/typed/boards/:boardId/events                                controllers.typed.TicketController.events(boardId)
+POST        /api/v1/typed/boards/:boardId/tickets                               controllers.typed.TicketController.create(boardId)
+PUT         /api/v1/typed/boards/:boardId/tickets/:ticketId/todo                controllers.typed.TicketController.updateStatusTodo(boardId, ticketId)
+PUT         /api/v1/typed/boards/:boardId/tickets/:ticketId/inprogress          controllers.typed.TicketController.updateStatusInProgress(boardId, ticketId)
+PUT         /api/v1/typed/boards/:boardId/tickets/:ticketId/done                controllers.typed.TicketController.updateStatusDone(boardId, ticketId)
+GET         /api/v1/typed/boards/:boardId/tickets                               controllers.typed.TicketController.list(boardId)
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                                                       controllers.AssetsBuilder.versioned(file)
+
