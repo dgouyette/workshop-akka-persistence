@@ -80,4 +80,11 @@ Côté front, pour que celui-ci utilise l'api untyped, il faudra aller le modifi
 
 `const prefix = '/api/v1/typed';` à remplacer par `const prefix = '/api/v1/untyped';`
 
+Quelques aides 
+ * [Readme](README.md)
+ * [commun aux deux parties](2-shared.md)
+ * [Typed](2-typed.md)
+ * [Untyped](2-untyped.md)
+
+
 Bon courage
