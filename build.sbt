@@ -4,6 +4,7 @@ organization := "com.technov"
 version := "1.0-SNAPSHOT"
 
 resolvers += Resolver.jcenterRepo
+resolvers += Resolver.bintrayRepo("dnvriend", "maven")
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
