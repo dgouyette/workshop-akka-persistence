@@ -11,6 +11,6 @@ object Board{
   sealed trait Status
   case object Running extends Status
   case object Archived extends Status
-  implicit val statusF  = derived.flat.oformat[Board.Status]((__ \ "type").format[String])
-  implicit val format = Json.format[Board]
+  implicit val statusF: OFormat[Status] = derived.flat.oformat[Board.Status]((__ \ "type").format[String])
+  implicit val format: OFormat[Board] = Json.format[Board]
 }
